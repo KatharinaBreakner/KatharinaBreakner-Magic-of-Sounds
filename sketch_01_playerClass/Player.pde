@@ -21,32 +21,22 @@ class Player
    ellipse(x, y,2*rad,2*rad); 
   }
   
-  void moveThePlayer(String currentKey)
+  void moveThePlayer(boolean [] currentKeys)
   {
-     if(currentKey=="a") //check if the A Button is pressed from my keyarray (index 97)
+     keys = currentKeys;
+     if(keys['a']) //check if the A Button is pressed from my keyarray (index 97)
      {
        x--;
      }
      
-     if(currentKey=="d")
+     if(keys['d'])
      x++;
      
-     if (currentKey=="w")
+     if (keys['w'])
      y--;
      
-     if(currentKey=="s")
+     if(keys['s'])
      y++;
   }
 
-  public void keyPressed()
-  
-  {
-    keys [key] = true; //hit the last key which was pressed and set this letter in the array to true, so I can store multiple keypressed --> makes the playermovement smoother 
-  }
-  
-  public void keyReleased()
-  
-  {
-    keys [key] = false;
-  }
 }
