@@ -6,9 +6,9 @@ class Sound
   
   Sound(float tempD)
   {
-  x = width/2;
-  y = height/2;
-  diameter= tempD;
+    x = width/2;
+    y = height/2;
+    diameter= tempD;
   }
   void ascend()
   {
@@ -28,5 +28,5 @@ class Sound
     {
       y=diameter;
     }
-}
+  }
 }
